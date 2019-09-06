@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 cạnh của 1 tam giác</title>
+</head>
+<body>
+<script>
+    let canh1 =Number(prompt('Cạnh thứ nhất'));
+    let canh2 =Number(prompt("Cạnh thứ hai"));
+    let canh3 =Number(prompt("Cạnh thứ ba"));
+    if (canh1>0 && canh2>0 && canh3>0){
+        if (canh1+canh2>canh3 && canh2+canh3>canh1 && canh1+canh3>canh2){
+            alert("Đây là các cạnh của 1 tam giác");
+        }
+    }else {
+        alert('Đây không phải là các cạnh của 1 tam giác');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập hệ số a: <input type="text" id="hesoa"/><br>
+Nhập hệ số b: <input type="text" id="hesob"/><br>
+Nhập hệ số c: <input type="text" id="hesoc"/>
+<button type="button" onclick="tinh()">Tính</button>
+<script>
+    function tinh() {
+        let hesoa = document.getElementById('hesoa').value;
+        let hesob = document.getElementById('hesob').value;
+        let hesoc = document.getElementById('hesoc').value;
+        let denta = (hesob * hesob) - 4 * hesoa * hesoc;
+        let a1 = (-hesob + Math.sqrt(denta)) / 2 / hesoa;
+        let a2 = (-hesob - Math.sqrt(denta)) / 2 / hesoa;
+        let a3 = -hesob/2/hesoa;
+        if (denta < 0){
+            alert("Phương trình vô nghiệm");
+        }else if (denta = 0){
+            alert('Phương trình có nghiệp kép '+ a3);
+        }else {
+            alert("phương trình có 2 nghiệm phân biệt "+ a1 + "và" + a2);
+        }
+    }
+</script>
+</body>
+</html>
